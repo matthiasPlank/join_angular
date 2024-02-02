@@ -1,0 +1,31 @@
+#header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 12px 12px 12px; 
+    width: calc(100% - 24px);
+    box-shadow: 0px 4px 4px 0px #0000001A;
+
+    #header-title{
+        padding-left: 92px;
+
+    }
+    #header-menu{
+        display: flex;
+        align-items: center;
+        gap: 12px; 
+       
+        #header-menu-user{
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            padding: 12px;
+            height: 20px;
+            width: 20px;
+        }
+
+    }
+}

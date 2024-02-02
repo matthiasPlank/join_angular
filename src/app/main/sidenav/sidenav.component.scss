@@ -1,0 +1,53 @@
+#sidenav{
+    width: 300px; 
+    height: 100vh;
+    background: #2A3647;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sidenav-header{
+    padding-top: 48px;
+}
+
+#sidenav-menu{
+
+    display: flex;
+    flex-direction: column;
+    gap: 24px; 
+    width:100%; 
+    justify-content: center;
+    align-items: center;
+
+    .sidenav-menu-item{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 12px; 
+        color: white; 
+        width: calc(100% - 60px);
+        padding-left: 60px;
+        height: 60px;
+    
+        img{
+            width: 30px;
+        }
+        span{
+            color:#CDCDCD;
+        }
+        &:hover{
+            background: #091931;
+            cursor: pointer;
+        }
+    }
+}
+
+#sidenav-footer{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap:24px; 
+    padding-bottom: 48px;
+}

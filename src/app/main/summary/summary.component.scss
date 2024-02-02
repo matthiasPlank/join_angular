@@ -1,0 +1,23 @@
+#summary{
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    #summary-header{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 24px; 
+        padding: 30px 80px;
+        #summary-header-divider{
+            height: 48px;
+            width: 3px;
+            background: #29ABE2;
+        }
+
+    }
+    #summary-header{
+
+    }
+}

@@ -1,0 +1,9 @@
+#main{
+    display: flex;
+
+    #main-right{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+}
