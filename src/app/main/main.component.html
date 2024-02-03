@@ -4,9 +4,14 @@
     </div>
     <div id="main-right">
         <app-header></app-header>
+
         <div>
-            <app-summary></app-summary>
+            <app-summary *ngIf="activeSelectionService.activeSelection === 'summary' "></app-summary>
+            <app-add-task *ngIf="activeSelectionService.activeSelection === 'addTask' "></app-add-task>
+            <app-boards *ngIf="activeSelectionService.activeSelection === 'board' "></app-boards>
+            <app-contacts *ngIf="activeSelectionService.activeSelection === 'contacts' "></app-contacts>
         </div>
+
     </div>
 
 

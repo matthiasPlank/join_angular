@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActiveSelectionService } from '../../../services/active-selection.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -8,5 +9,14 @@ import { Component } from '@angular/core';
   styleUrl: './sidenav.component.scss'
 })
 export class SidenavComponent {
+
+
+  constructor(private activeSelectionService:ActiveSelectionService){
+
+  }
+
+  changeSelection(newSelection:string){
+    this.activeSelectionService.activeSelection = newSelection; 
+  }
 
 }

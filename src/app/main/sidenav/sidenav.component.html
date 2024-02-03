@@ -3,19 +3,19 @@
             <img src="/assets/img/logo/join_logo.svg" alt="logo">
         </div>
         <div id="sidenav-menu">
-            <div class="sidenav-menu-item">
+            <div class="sidenav-menu-item" (click)="changeSelection('summary')">
                 <img src="/assets/img/icons/summary.svg" alt="summary">
                 <span>Summary</span>
             </div>
-            <div class="sidenav-menu-item">
+            <div class="sidenav-menu-item" (click)="changeSelection('addTask')">
                 <img src="/assets/img/icons/addTask.svg" alt="summary">
                 <span>Add Task</span>
             </div>
-            <div class="sidenav-menu-item">
+            <div class="sidenav-menu-item" (click)="changeSelection('board')">
                 <img src="/assets/img/icons/board.svg" alt="summary">
                 <span>Board</span>
             </div>
-            <div class="sidenav-menu-item">
+            <div class="sidenav-menu-item" (click)="changeSelection('contacts')">
                 <img src="/assets/img/icons/contacts.svg" alt="summary">
                 <span>Contacts</span>
             </div>
