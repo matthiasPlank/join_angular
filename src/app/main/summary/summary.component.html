@@ -13,7 +13,11 @@
             <div class="summary-grid-row-element">Upcomming</div>
         </div>
         <div class="summary-grid-row">
-            <div class="summary-grid-row-element">Tasks in Board</div>
+            <div class="summary-grid-row-element">
+                    <span *ngIf="tasksInBoard == undefined" class="loader"></span>
+                    <span *ngIf="tasksInBoard != undefined">{{tasksInBoard}}</span>
+                    <span>Tasks in Board</span>             
+            </div>
             <div class="summary-grid-row-element">Tasks in Progress</div>
             <div class="summary-grid-row-element">Awaiting Feedback</div>
         </div>
