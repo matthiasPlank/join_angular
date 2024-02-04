@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Task } from '../models/task.class';
+import { Observable, Subject } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -17,16 +19,30 @@ export class TaskService {
       kanban: "", 
       priority: "", 
       subtasks: [] 
+    }), 
+    new Task({
+      id: "",
+      title: "Mein zweiter Task", 
+      description: "", 
+      category: "", 
+      createdAt: new Date(),       
+      assigned: [], 
+      kanban: "in-progress", 
+      priority: "", 
+      subtasks: [] 
     })
-
   ] 
 
-  constructor() { }
+  loadedTasksSubject = new Subject<Task[]>();
+  tasks$ = this.loadedTasksSubject.asObservable();
 
+  constructor() {
+    this.getLoadedTasks();
+   }
 
   async getLoadedTasks(){
     setTimeout(() => {
-      return this.loadedTasks; 
+      this.loadedTasksSubject.next(this.loadedTasks);  
     }, 1000);
   }
 

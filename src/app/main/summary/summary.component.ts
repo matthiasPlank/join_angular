@@ -15,19 +15,21 @@ import { Task } from '../../../models/task.class';
 export class SummaryComponent implements OnInit {
 
   tasks:Task[] = []; 
-
-  tasksInBoard?: number = undefined; 
+  tasksInBoard?: number = undefined;
+  tasksInProgress?: number = undefined; 
 
   constructor(private taskService:TaskService){
    
   }
 
   ngOnInit(){
-    //console.log(this.taskService.getLoadedTasks());
-    this.taskService.getLoadedTasks()
-      .then((data:any) => {
-        console.log(data); 
-      }); 
+
+    this.taskService.tasks$.subscribe(data => {
+      this.tasks = data;
+      this.tasksInBoard = this.tasks.length; 
+      this.tasksInProgress = this.tasks.filter((task) => { task.kanban == "in-progress"}).length; 
+    });
+
   }
 
 }

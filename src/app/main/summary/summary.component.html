@@ -18,7 +18,11 @@
                     <span *ngIf="tasksInBoard != undefined">{{tasksInBoard}}</span>
                     <span>Tasks in Board</span>             
             </div>
-            <div class="summary-grid-row-element">Tasks in Progress</div>
+            <div class="summary-grid-row-element">
+                <span *ngIf="tasksInProgress == undefined" class="loader"></span>
+                <span *ngIf="tasksInProgress != undefined">{{tasksInProgress}}</span>
+                <span>Tasks in Progress</span>  
+            </div>
             <div class="summary-grid-row-element">Awaiting Feedback</div>
         </div>
     </div>
